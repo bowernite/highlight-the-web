@@ -597,7 +597,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>echo $(./node_modules/.bin/run-node generate-markdown-link.js)</string>
+				<string>echo $(../node_modules/.bin/run-node ../generate-markdown-link.js)</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
