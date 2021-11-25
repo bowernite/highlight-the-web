@@ -62,6 +62,19 @@
 		</array>
 		<key>293CAF59-AFAC-45A0-A95C-20AA2FD33689</key>
 		<array/>
+		<key>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>80270192-9EFD-44DF-B0E0-4C5F0D32EAAB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3DF78C1E-A25C-48F6-A5F0-DF11EBEB1D02</key>
 		<array>
 			<dict>
@@ -260,6 +273,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>CD0A2BC1-FDD3-40EF-B0A1-D1880402BE96</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CC7BEA9D-22BD-4D6B-B43F-5732BA6C3FBD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -738,7 +764,7 @@
 				<false/>
 				<key>clipboardtext</key>
 				<string>{var:originalClipboard}
-- {query}</string>
+- {query}{var:lineSuffix}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
@@ -805,6 +831,61 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>2</integer>
+				<key>hotmod</key>
+				<integer>1179648</integer>
+				<key>hotstring</key>
+				<string>D</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.google.Chrome</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>CC7BEA9D-22BD-4D6B-B43F-5732BA6C3FBD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>lineSuffix</key>
+					<string>)</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
@@ -825,7 +906,7 @@
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
-				<string>- {query}</string>
+				<string>- {query}{var:lineSuffix}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
@@ -1052,6 +1133,13 @@ function getTextFragmentLink(activeTab) {
 			<key>ypos</key>
 			<integer>415</integer>
 		</dict>
+		<key>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</key>
+		<dict>
+			<key>xpos</key>
+			<integer>185</integer>
+			<key>ypos</key>
+			<integer>905</integer>
+		</dict>
 		<key>3DF78C1E-A25C-48F6-A5F0-DF11EBEB1D02</key>
 		<dict>
 			<key>xpos</key>
@@ -1165,9 +1253,9 @@ function getTextFragmentLink(activeTab) {
 			<key>note</key>
 			<string>Backup: Before we started using the Chrome extension to generate and copy the link</string>
 			<key>xpos</key>
-			<integer>75</integer>
+			<integer>55</integer>
 			<key>ypos</key>
-			<integer>1085</integer>
+			<integer>1215</integer>
 		</dict>
 		<key>9C0AA2FE-03E3-47B0-AC90-B7FC7FA94282</key>
 		<dict>
@@ -1189,6 +1277,13 @@ function getTextFragmentLink(activeTab) {
 			<integer>635</integer>
 			<key>ypos</key>
 			<integer>200</integer>
+		</dict>
+		<key>CC7BEA9D-22BD-4D6B-B43F-5732BA6C3FBD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>35</integer>
+			<key>ypos</key>
+			<integer>875</integer>
 		</dict>
 		<key>CD0A2BC1-FDD3-40EF-B0A1-D1880402BE96</key>
 		<dict>
