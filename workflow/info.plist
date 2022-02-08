@@ -105,7 +105,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>7D56DA55-5ED5-44B5-8754-61A739627BE5</string>
+				<string>1CE9589A-8E24-4226-A787-52869D5605C7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -206,7 +206,18 @@
 			</dict>
 		</array>
 		<key>7D56DA55-5ED5-44B5-8754-61A739627BE5</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>48D82DDD-C8A3-4202-815C-3E8EA3566E35</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7DBA48C6-7E02-461C-985B-B0142E54D7E7</key>
 		<array>
 			<dict>
@@ -341,7 +352,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>CF6CE105-4668-414E-94C5-13A180D6D56D</string>
+				<string>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -409,6 +420,25 @@
 			<string>C0D9410F-E6ED-4C33-85CD-1E63CD6CEB5E</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{var:fakeClipboard}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>1CE9589A-8E24-4226-A787-52869D5605C7</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -532,25 +562,6 @@
 			<string>4C700386-46E8-4062-ABC7-005F043E98F0</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{var:fakeClipboard}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>1CE9589A-8E24-4226-A787-52869D5605C7</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1366,9 +1377,9 @@ function getTextFragmentLink(activeTab) {
 		<key>1CE9589A-8E24-4226-A787-52869D5605C7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>320</integer>
+			<integer>275</integer>
 			<key>ypos</key>
-			<integer>310</integer>
+			<integer>190</integer>
 		</dict>
 		<key>1F268917-AB3C-494B-9699-C277BF4AAF52</key>
 		<dict>
@@ -1583,9 +1594,9 @@ function getTextFragmentLink(activeTab) {
 		<key>CC7BEA9D-22BD-4D6B-B43F-5732BA6C3FBD</key>
 		<dict>
 			<key>xpos</key>
-			<integer>315</integer>
+			<integer>75</integer>
 			<key>ypos</key>
-			<integer>1100</integer>
+			<integer>995</integer>
 		</dict>
 		<key>CD0A2BC1-FDD3-40EF-B0A1-D1880402BE96</key>
 		<dict>
