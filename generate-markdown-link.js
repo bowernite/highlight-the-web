@@ -27,6 +27,7 @@ var originalClipboard = process.env.fakeClipboard;
     // }
     function generate() {
         var selection = copyChromeSelection({ activeTab: activeTab, chrome: chrome, app: app });
+        return;
         // Sometimes we get a false negative here. So we're naively going to just try again, just to make sure
         if (!selection) {
             delay(0.1);
@@ -41,6 +42,7 @@ var originalClipboard = process.env.fakeClipboard;
         }
         else if (selection) {
             // If using a selection, write it in plain text and note the source as a link at the end
+            // @ts-ignore
             var selectedText = normalizeSelection(selection);
             console.log("selectedText:", selectedText);
             getTextFragmentLink(activeTab);
@@ -63,6 +65,7 @@ var originalClipboard = process.env.fakeClipboard;
         var activeTab = _a.activeTab, chrome = _a.chrome, app = _a.app;
         // Copy the current chrome selection to the clipboard
         chrome.copySelection(activeTab);
+        return;
         var selection = "";
         try {
             selection = app.theClipboard();

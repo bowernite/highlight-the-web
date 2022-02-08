@@ -105,7 +105,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1CE9589A-8E24-4226-A787-52869D5605C7</string>
+				<string>7D56DA55-5ED5-44B5-8754-61A739627BE5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -192,11 +192,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>7D56DA55-5ED5-44B5-8754-61A739627BE5</key>
+		<key>7A7915D6-A5B5-4D49-A581-30A39687D3A1</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>48D82DDD-C8A3-4202-815C-3E8EA3566E35</string>
+				<string>7DBA48C6-7E02-461C-985B-B0142E54D7E7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -204,9 +204,14 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>7D56DA55-5ED5-44B5-8754-61A739627BE5</key>
+		<array/>
+		<key>7DBA48C6-7E02-461C-985B-B0142E54D7E7</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>8BDC6B00-51E1-4D02-A413-C275C9FF5C97</string>
+				<string>98E5859E-135A-4970-9744-8CA39093736F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -241,11 +246,62 @@
 				<false/>
 			</dict>
 		</array>
+		<key>89EA0B40-A5B6-4CF2-8239-77CBE4CEA51F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6E955148-0EAD-4B93-AA94-03CC45442A6B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>98E5859E-135A-4970-9744-8CA39093736F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>89EA0B40-A5B6-4CF2-8239-77CBE4CEA51F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>6C47FF97-94C7-4916-8459-51F86AAD2972</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B44FC35E-89AF-4A45-A7D4-A92F190DE3D1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>9C0AA2FE-03E3-47B0-AC90-B7FC7FA94282</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>02D3A982-DA66-4C08-B2F2-C069986519A2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B44FC35E-89AF-4A45-A7D4-A92F190DE3D1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AD73BF57-285E-4DD7-B157-1C456DBE1CEE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -285,7 +341,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</string>
+				<string>CF6CE105-4668-414E-94C5-13A180D6D56D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -299,6 +355,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>293CAF59-AFAC-45A0-A95C-20AA2FD33689</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CF6CE105-4668-414E-94C5-13A180D6D56D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7A7915D6-A5B5-4D49-A581-30A39687D3A1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -344,21 +413,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
+				<key>concurrently</key>
 				<false/>
-				<key>clipboardtext</key>
-				<string>{var:fakeClipboard}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo $(../node_modules/.bin/run-node ../generate-markdown-link.js)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>generate-markdown-link.js</string>
+				<key>type</key>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>1CE9589A-8E24-4226-A787-52869D5605C7</string>
+			<string>7D56DA55-5ED5-44B5-8754-61A739627BE5</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -392,29 +465,6 @@
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>618253DF-A6A6-4FF5-A336-1061D2F36165</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>echo $(../node_modules/.bin/run-node ../generate-markdown-link.js)</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>generate-markdown-link.js</string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>7D56DA55-5ED5-44B5-8754-61A739627BE5</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -486,6 +536,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{var:fakeClipboard}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>1CE9589A-8E24-4226-A787-52869D5605C7</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>subtext</key>
@@ -522,25 +591,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>CD0A2BC1-FDD3-40EF-B0A1-D1880402BE96</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -558,6 +608,25 @@
 			<string>293CAF59-AFAC-45A0-A95C-20AA2FD33689</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>CD0A2BC1-FDD3-40EF-B0A1-D1880402BE96</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -618,25 +687,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>autopaste</key>
 				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>echo $(../node_modules/.bin/run-node ../generate-markdown-link.js)</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>generate-markdown-link.js</string>
-				<key>type</key>
-				<integer>5</integer>
+				<key>clipboardtext</key>
+				<string>{var:fakeClipboard}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>02D3A982-DA66-4C08-B2F2-C069986519A2</string>
+			<string>9C0AA2FE-03E3-47B0-AC90-B7FC7FA94282</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -676,21 +741,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
+				<key>concurrently</key>
 				<false/>
-				<key>clipboardtext</key>
-				<string>{var:fakeClipboard}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo $(../node_modules/.bin/run-node ../generate-markdown-link.js)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>generate-markdown-link.js</string>
+				<key>type</key>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>9C0AA2FE-03E3-47B0-AC90-B7FC7FA94282</string>
+			<string>02D3A982-DA66-4C08-B2F2-C069986519A2</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -725,19 +794,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.transform</string>
-			<key>uid</key>
-			<string>1F268917-AB3C-494B-9699-C277BF4AAF52</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>{query}</string>
 				<key>passthroughargument</key>
@@ -760,22 +816,15 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{var:originalClipboard}
-- {query}{var:lineSuffix}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.utility.transform</string>
 			<key>uid</key>
-			<string>08CE81B8-7842-4481-8A2F-136618AF1F09</string>
+			<string>1F268917-AB3C-494B-9699-C277BF4AAF52</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -797,6 +846,26 @@
 			<string>64235F13-B67B-4DE4-86A5-10794800CB68</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{var:originalClipboard}
+- {query}{var:lineSuffix}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>08CE81B8-7842-4481-8A2F-136618AF1F09</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -827,6 +896,83 @@
 			<string>6B5BF8CE-42ED-4290-86F7-AA97DA122E1B</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>EAA06E2E-B631-4348-AB82-102E5C7C462A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>lineSuffix</key>
+					<string>)</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>🌱 Started new append</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>D97E7E02-C151-4034-BE4B-266A65AAAE6D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>- {query}{var:lineSuffix}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>7F904FE5-11B1-40E3-989C-5FA32E3463B6</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -866,58 +1012,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
+				<key>concurrently</key>
 				<false/>
-				<key>variables</key>
-				<dict>
-					<key>lineSuffix</key>
-					<string>)</string>
-				</dict>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo $(../node_modules/.bin/run-node ../copy-chrome-selection.js)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>generate-markdown-link.js</string>
+				<key>type</key>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</string>
+			<string>7A7915D6-A5B5-4D49-A581-30A39687D3A1</string>
 			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>'{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>EAA06E2E-B631-4348-AB82-102E5C7C462A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>- {query}{var:lineSuffix}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>7F904FE5-11B1-40E3-989C-5FA32E3463B6</string>
-			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -931,12 +1044,101 @@
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>🌱 Started new append</string>
+				<string>🌳 Appended to clipboard notes</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>D97E7E02-C151-4034-BE4B-266A65AAAE6D</string>
+			<string>6E955148-0EAD-4B93-AA94-03CC45442A6B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtextrtf</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0\c84706\cname controlTextColor;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \{var:originalClipboard\}\
+\{clipboard\}}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>89EA0B40-A5B6-4CF2-8239-77CBE4CEA51F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>originalClipboard</key>
+					<string>{clipboard:0}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>CF6CE105-4668-414E-94C5-13A180D6D56D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:originalClipboard}</string>
+						<key>matchcasesensitive</key>
+						<true/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>✍️🏼</string>
+						<key>outputlabel</key>
+						<string>Have already started appending</string>
+						<key>uid</key>
+						<string>6C47FF97-94C7-4916-8459-51F86AAD2972</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Start of new appending</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>98E5859E-135A-4970-9744-8CA39093736F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>7DBA48C6-7E02-461C-985B-B0142E54D7E7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1093,6 +1295,55 @@ function getTextFragmentLink(activeTab) {
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtextrtf</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0\c84706\cname controlTextColor;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \uc0\u8203 
+\f1 \uc0\u9997 \u65039 \u55356 \u57340 
+\f0 \
+\{clipboard\}}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>B44FC35E-89AF-4A45-A7D4-A92F190DE3D1</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>🌱 Started new append</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>AD73BF57-285E-4DD7-B157-1C456DBE1CEE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -1115,9 +1366,9 @@ function getTextFragmentLink(activeTab) {
 		<key>1CE9589A-8E24-4226-A787-52869D5605C7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>265</integer>
+			<integer>320</integer>
 			<key>ypos</key>
-			<integer>190</integer>
+			<integer>310</integer>
 		</dict>
 		<key>1F268917-AB3C-494B-9699-C277BF4AAF52</key>
 		<dict>
@@ -1204,6 +1455,13 @@ function getTextFragmentLink(activeTab) {
 			<key>ypos</key>
 			<integer>860</integer>
 		</dict>
+		<key>6E955148-0EAD-4B93-AA94-03CC45442A6B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1270</integer>
+			<key>ypos</key>
+			<integer>1130</integer>
+		</dict>
 		<key>72E9427B-CC41-481B-B3FE-B9891670063D</key>
 		<dict>
 			<key>note</key>
@@ -1220,12 +1478,26 @@ function getTextFragmentLink(activeTab) {
 			<key>ypos</key>
 			<integer>765</integer>
 		</dict>
+		<key>7A7915D6-A5B5-4D49-A581-30A39687D3A1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>560</integer>
+			<key>ypos</key>
+			<integer>1125</integer>
+		</dict>
 		<key>7D56DA55-5ED5-44B5-8754-61A739627BE5</key>
 		<dict>
 			<key>xpos</key>
 			<integer>425</integer>
 			<key>ypos</key>
 			<integer>190</integer>
+		</dict>
+		<key>7DBA48C6-7E02-461C-985B-B0142E54D7E7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>710</integer>
+			<key>ypos</key>
+			<integer>1155</integer>
 		</dict>
 		<key>7F904FE5-11B1-40E3-989C-5FA32E3463B6</key>
 		<dict>
@@ -1240,6 +1512,13 @@ function getTextFragmentLink(activeTab) {
 			<integer>190</integer>
 			<key>ypos</key>
 			<integer>775</integer>
+		</dict>
+		<key>89EA0B40-A5B6-4CF2-8239-77CBE4CEA51F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1070</integer>
+			<key>ypos</key>
+			<integer>1130</integer>
 		</dict>
 		<key>8BDC6B00-51E1-4D02-A413-C275C9FF5C97</key>
 		<dict>
@@ -1257,12 +1536,35 @@ function getTextFragmentLink(activeTab) {
 			<key>ypos</key>
 			<integer>1215</integer>
 		</dict>
+		<key>98E5859E-135A-4970-9744-8CA39093736F</key>
+		<dict>
+			<key>note</key>
+			<string>Matches any markdown list item with a link</string>
+			<key>xpos</key>
+			<integer>785</integer>
+			<key>ypos</key>
+			<integer>1145</integer>
+		</dict>
 		<key>9C0AA2FE-03E3-47B0-AC90-B7FC7FA94282</key>
 		<dict>
 			<key>xpos</key>
 			<integer>265</integer>
 			<key>ypos</key>
 			<integer>745</integer>
+		</dict>
+		<key>AD73BF57-285E-4DD7-B157-1C456DBE1CEE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1255</integer>
+			<key>ypos</key>
+			<integer>1280</integer>
+		</dict>
+		<key>B44FC35E-89AF-4A45-A7D4-A92F190DE3D1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1085</integer>
+			<key>ypos</key>
+			<integer>1280</integer>
 		</dict>
 		<key>C0D9410F-E6ED-4C33-85CD-1E63CD6CEB5E</key>
 		<dict>
@@ -1281,9 +1583,9 @@ function getTextFragmentLink(activeTab) {
 		<key>CC7BEA9D-22BD-4D6B-B43F-5732BA6C3FBD</key>
 		<dict>
 			<key>xpos</key>
-			<integer>35</integer>
+			<integer>315</integer>
 			<key>ypos</key>
-			<integer>875</integer>
+			<integer>1100</integer>
 		</dict>
 		<key>CD0A2BC1-FDD3-40EF-B0A1-D1880402BE96</key>
 		<dict>
@@ -1291,6 +1593,13 @@ function getTextFragmentLink(activeTab) {
 			<integer>845</integer>
 			<key>ypos</key>
 			<integer>415</integer>
+		</dict>
+		<key>CF6CE105-4668-414E-94C5-13A180D6D56D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>485</integer>
+			<key>ypos</key>
+			<integer>1140</integer>
 		</dict>
 		<key>D8237A51-C314-4848-BEC3-6E2B963FF33C</key>
 		<dict>
@@ -1309,9 +1618,9 @@ function getTextFragmentLink(activeTab) {
 		<key>EAA06E2E-B631-4348-AB82-102E5C7C462A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>830</integer>
+			<integer>745</integer>
 			<key>ypos</key>
-			<integer>975</integer>
+			<integer>895</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
