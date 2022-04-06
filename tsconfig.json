@@ -11,6 +11,8 @@
     // "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "module": "ES6"
+    "module": "amd",
+    "isolatedModules": true,
+    // "outFile": "generate-markdown-link.js"
   }
 }
