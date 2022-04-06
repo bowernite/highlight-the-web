@@ -4,17 +4,18 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc generate-markdown-link.ts"
+    "build": "tsc"
   },
   "devDependencies": {
     "@jxa/global-type": "^1.3.4",
     "@jxa/run": "^1.3.4",
     "@types/node": "^16.7.13",
     "run-node": "^2.0.0",
-    "ts-node": "^10.2.1",
-    "typescript": "^4.4.2"
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
   },
   "dependencies": {
-    "node-jxa": "github:johnelm/node-jxa#v2.1.2"
+    "node-jxa": "github:johnelm/node-jxa#v2.1.2",
+    "parse-domain": "^7.0.0"
   }
 }
