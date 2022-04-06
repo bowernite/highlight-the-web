@@ -4,12 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "esbuild ./generate-markdown-link.ts --bundle --platform=node --outfile=generate-markdown-link.js --target=node14"
   },
   "devDependencies": {
     "@jxa/global-type": "^1.3.4",
     "@jxa/run": "^1.3.4",
     "@types/node": "^16.7.13",
+    "esbuild": "^0.14.32",
     "run-node": "^2.0.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
