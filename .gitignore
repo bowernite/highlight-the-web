@@ -1,1 +1,3 @@
 node_modules/
+/generate-markdown-link.js
+/copy-chrome-selection.js
