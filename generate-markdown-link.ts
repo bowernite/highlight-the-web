@@ -76,7 +76,7 @@ run((originalClipboard) => {
     const { parseDomain, fromUrl } = importParseDomain();
     // @ts-ignore
     const parseResult = parseDomain(fromUrl(url));
-    console.log("parseResult", JSON.stringify(parseResult, null, 2))
+    console.log("parseResult", JSON.stringify(parseResult, null, 2));
     // @ts-ignore
     return `${parseResult.domain}.${parseResult.topLevelDomains.join(".")}`;
   }
@@ -152,7 +152,7 @@ run((originalClipboard) => {
     var LABEL_LENGTH_MAX = 63;
     var DOMAIN_LENGTH_MAX = 253;
     // var textEncoder = new TextEncoder();
-      // @ts-ignore
+    // @ts-ignore
     var Validation;
     (function (Validation2) {
       // @ts-ignore
@@ -160,7 +160,7 @@ run((originalClipboard) => {
       // @ts-ignore
       Validation2["Strict"] = "STRICT";
     })(Validation || (Validation = {}));
-      // @ts-ignore
+    // @ts-ignore
     var ValidationErrorType;
     (function (ValidationErrorType2) {
       // @ts-ignore
@@ -177,7 +177,7 @@ run((originalClipboard) => {
       // @ts-ignore
       ValidationErrorType2["LastLabelInvalid"] = "LAST_LABEL_INVALID";
     })(ValidationErrorType || (ValidationErrorType = {}));
-      // @ts-ignore
+    // @ts-ignore
     var SanitizationResultType;
     (function (SanitizationResultType2) {
       // @ts-ignore
@@ -187,10 +187,10 @@ run((originalClipboard) => {
       // @ts-ignore
       SanitizationResultType2["Error"] = "ERROR";
     })(SanitizationResultType || (SanitizationResultType = {}));
-      // @ts-ignore
+    // @ts-ignore
     var createNoHostnameError = (input) => {
       return {
-      // @ts-ignore
+        // @ts-ignore
         type: ValidationErrorType.NoHostname,
         message: `The given input ${String(
           input
@@ -198,30 +198,30 @@ run((originalClipboard) => {
         column: 1,
       };
     };
-      // @ts-ignore
+    // @ts-ignore
     var createDomainMaxLengthError = (domain, length) => {
       return {
-      // @ts-ignore
+        // @ts-ignore
         type: ValidationErrorType.DomainMaxLength,
         message: `Domain "${domain}" is too long. Domain is ${length} octets long but should not be longer than ${DOMAIN_LENGTH_MAX}.`,
         column: length,
       };
     };
-      // @ts-ignore
+    // @ts-ignore
     var createLabelMinLengthError = (label, column) => {
       const length = label.length;
       return {
-      // @ts-ignore
+        // @ts-ignore
         type: ValidationErrorType.LabelMinLength,
         message: `Label "${label}" is too short. Label is ${length} octets long but should be at least ${LABEL_LENGTH_MIN}.`,
         column,
       };
     };
-      // @ts-ignore
+    // @ts-ignore
     var createLabelMaxLengthError = (label, column) => {
       const length = label.length;
       return {
-      // @ts-ignore
+        // @ts-ignore
         type: ValidationErrorType.LabelMaxLength,
         message: `Label "${label}" is too long. Label is ${length} octets long but should not be longer than ${LABEL_LENGTH_MAX}.`,
         column,
@@ -237,33 +237,33 @@ run((originalClipboard) => {
       column
     ) => {
       return {
-      // @ts-ignore
+        // @ts-ignore
         type: ValidationErrorType.LabelInvalidCharacter,
         message: `Label "${label}" contains invalid character "${invalidCharacter}" at column ${column}.`,
         column,
       };
     };
-      // @ts-ignore
+    // @ts-ignore
     var createLastLabelInvalidError = (label, column) => {
       return {
-      // @ts-ignore
+        // @ts-ignore
         type: ValidationErrorType.LabelInvalidCharacter,
         message: `Last label "${label}" must not be all-numeric.`,
         column,
       };
     };
-      // @ts-ignore
+    // @ts-ignore
     var sanitize = (input, options = {}) => {
       if (typeof input !== "string") {
         return {
-      // @ts-ignore
+          // @ts-ignore
           type: SanitizationResultType.Error,
           errors: [createNoHostnameError(input)],
         };
       }
       if (input === "") {
         return {
-      // @ts-ignore
+          // @ts-ignore
           type: SanitizationResultType.ValidDomain,
           domain: input,
           labels: [],
@@ -296,13 +296,13 @@ run((originalClipboard) => {
       const labelValidationErrors = validateLabels[validation](labels);
       if (labelValidationErrors.length > 0) {
         return {
-      // @ts-ignore
+          // @ts-ignore
           type: SanitizationResultType.Error,
           errors: labelValidationErrors,
         };
       }
       return {
-      // @ts-ignore
+        // @ts-ignore
         type: SanitizationResultType.ValidDomain,
         domain: input,
         labels,
@@ -311,7 +311,7 @@ run((originalClipboard) => {
     var validateLabels = {
       // @ts-ignore
       [Validation.Lax]: (labels) => {
-        return []
+        return [];
         // const labelValidationErrors = [];
         // let column = 1;
         // for (const label of labels) {
@@ -391,7 +391,7 @@ run((originalClipboard) => {
         children: /* @__PURE__ */ new Map(),
       };
     };
-      // @ts-ignore
+    // @ts-ignore
     var createOrGetChild = (parent, label) => {
       let child = parent.children.get(label);
       if (child === void 0) {
@@ -407,7 +407,7 @@ run((originalClipboard) => {
     };
 
     // node_modules/parse-domain/build/trie/parse-trie.js
-      // @ts-ignore
+    // @ts-ignore
     var parseTrie = (serializedTrie) => {
       const rootNode = createRootNode();
       let domain = "";
@@ -441,7 +441,7 @@ run((originalClipboard) => {
               );
             }
             addDomain();
-      // @ts-ignore
+            // @ts-ignore
             parentNode = parentNode.parent;
             continue;
           }
@@ -462,7 +462,7 @@ run((originalClipboard) => {
       "invalid",
       "test",
     ];
-      // @ts-ignore
+    // @ts-ignore
     var ParseResultType;
     (function (ParseResultType2) {
       // @ts-ignore
@@ -477,11 +477,11 @@ run((originalClipboard) => {
       // @ts-ignore
       ParseResultType2["Listed"] = "LISTED";
     })(ParseResultType || (ParseResultType = {}));
-      // @ts-ignore
+    // @ts-ignore
     var getAtIndex = (array, index) => {
       return index >= 0 && index < array.length ? array[index] : void 0;
     };
-      // @ts-ignore
+    // @ts-ignore
     var splitLabelsIntoDomains = (labels, index) => {
       return {
         subDomains: labels.slice(0, Math.max(0, index)),
@@ -489,17 +489,17 @@ run((originalClipboard) => {
         topLevelDomains: labels.slice(index + 1),
       };
     };
-      // @ts-ignore
+    // @ts-ignore
     var parsedIcannTrie;
-      // @ts-ignore
+    // @ts-ignore
     var parsedPrivateTrie;
-      // @ts-ignore
+    // @ts-ignore
     var parseDomain = (hostname, options) => {
       const sanitizationResult = sanitize(hostname, options);
       // @ts-ignore
       if (sanitizationResult.type === SanitizationResultType.Error) {
         return {
-      // @ts-ignore
+          // @ts-ignore
           type: ParseResultType.Invalid,
           hostname,
           errors: sanitizationResult.errors,
@@ -517,46 +517,46 @@ run((originalClipboard) => {
       const { labels, domain } = sanitizationResult;
       if (
         hostname === "" ||
-      // @ts-ignore
+        // @ts-ignore
         RESERVED_TOP_LEVEL_DOMAINS.includes(labels[labels.length - 1])
       ) {
         return {
-      // @ts-ignore
+          // @ts-ignore
           type: ParseResultType.Reserved,
           hostname: domain,
           labels,
         };
       }
       parsedIcannTrie =
-      // @ts-ignore
+        // @ts-ignore
         parsedIcannTrie !== null && parsedIcannTrie !== void 0
-      // @ts-ignore
-          ? parsedIcannTrie
+          ? // @ts-ignore
+            parsedIcannTrie
           : parseTrie(icann_default);
       parsedPrivateTrie =
-      // @ts-ignore
+        // @ts-ignore
         parsedPrivateTrie !== null && parsedPrivateTrie !== void 0
-      // @ts-ignore
-          ? parsedPrivateTrie
+          ? // @ts-ignore
+            parsedPrivateTrie
           : parseTrie(private_default);
       const icannTlds = lookUpTldsInTrie(labels, parsedIcannTrie);
       const privateTlds = lookUpTldsInTrie(labels, parsedPrivateTrie);
       if (icannTlds.length === 0 && privateTlds.length === 0) {
         return {
-      // @ts-ignore
+          // @ts-ignore
           type: ParseResultType.NotListed,
           hostname: domain,
           labels,
         };
       }
       const indexOfPublicSuffixDomain =
-      // @ts-ignore
+        // @ts-ignore
         labels.length - Math.max(privateTlds.length, icannTlds.length) - 1;
       // @ts-ignore
       const indexOfIcannDomain = labels.length - icannTlds.length - 1;
       return Object.assign(
         {
-      // @ts-ignore
+          // @ts-ignore
           type: ParseResultType.Listed,
           hostname: domain,
           labels,
@@ -571,7 +571,7 @@ run((originalClipboard) => {
     var invalidIpv6Pattern =
       /^([a-z][*+.a-z-]+:\/\/)([^[].*:[^/?]*:[^/?]*)(.*)/i;
     var NO_HOSTNAME = Symbol("NO_HOSTNAME");
-      // @ts-ignore
+    // @ts-ignore
     // var fromUrl = (urlLike) => {
     //   if (typeof URL !== "function") {
     //     throw new Error(
@@ -591,7 +591,7 @@ run((originalClipboard) => {
     //   url = url.replace(invalidIpv6Pattern, "$1[$2]$3");
     //   try {
     //     console.log("new URL", url);
-        
+
     //     return new URL(url).hostname;
     //   } catch (_a) {
     //     return NO_HOSTNAME;
@@ -1005,7 +1005,9 @@ run((originalClipboard) => {
         return {
           // @ts-ignore
           type: ParseResultType.Ip,
+          // @ts-ignore
           hostname: sanitizationResult.ip,
+          // @ts-ignore
           ipVersion: sanitizationResult.ipVersion,
         };
       }
@@ -1078,7 +1080,7 @@ run((originalClipboard) => {
         : urlPattern.test(urlLike)
         ? urlLike
         : `http://${urlLike}`;
-      
+
       // NOTE: This was adding a bracket to the front of the URL, and I don't think we need it
       // url = url.replace(invalidIpv6Pattern, "$1[$2]$3");
       try {
