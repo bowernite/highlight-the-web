@@ -22,18 +22,7 @@
 			</dict>
 		</array>
 		<key>08CE81B8-7842-4481-8A2F-136618AF1F09</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>64235F13-B67B-4DE4-86A5-10794800CB68</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>1CE9589A-8E24-4226-A787-52869D5605C7</key>
 		<array>
 			<dict>
@@ -63,19 +52,6 @@
 		<key>293CAF59-AFAC-45A0-A95C-20AA2FD33689</key>
 		<array/>
 		<key>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>80270192-9EFD-44DF-B0E0-4C5F0D32EAAB</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>3DF78C1E-A25C-48F6-A5F0-DF11EBEB1D02</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -309,18 +285,7 @@
 			</dict>
 		</array>
 		<key>B44FC35E-89AF-4A45-A7D4-A92F190DE3D1</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>AD73BF57-285E-4DD7-B157-1C456DBE1CEE</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>C0D9410F-E6ED-4C33-85CD-1E63CD6CEB5E</key>
 		<array/>
 		<key>CC2AB55D-0235-4354-963C-6C14A3DF33DF</key>
@@ -698,60 +663,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{var:fakeClipboard}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>9C0AA2FE-03E3-47B0-AC90-B7FC7FA94282</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>3</integer>
-				<key>hotmod</key>
-				<integer>1179648</integer>
-				<key>hotstring</key>
-				<string>F</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>com.google.Chrome</string>
-				</array>
-				<key>relatedAppsMode</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>3DF78C1E-A25C-48F6-A5F0-DF11EBEB1D02</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -771,6 +682,25 @@
 			<string>02D3A982-DA66-4C08-B2F2-C069986519A2</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{var:fakeClipboard}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>9C0AA2FE-03E3-47B0-AC90-B7FC7FA94282</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -865,7 +795,8 @@
 				<false/>
 				<key>clipboardtext</key>
 				<string>{var:originalClipboard}
-- {query}{var:lineSuffix}</string>
+
+{query}{var:lineSuffix}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
@@ -891,7 +822,7 @@
 						<key>matchmode</key>
 						<integer>4</integer>
 						<key>matchstring</key>
-						<string>^- .*\[.+\]\(.+\)</string>
+						<string>^.*\(\[.+\]\(.+\)\)</string>
 						<key>outputlabel</key>
 						<string>Have already started appending</string>
 						<key>uid</key>
@@ -907,6 +838,41 @@
 			<string>6B5BF8CE-42ED-4290-86F7-AA97DA122E1B</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>2</integer>
+				<key>hotmod</key>
+				<integer>1179648</integer>
+				<key>hotstring</key>
+				<string>D</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.google.Chrome</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>CC7BEA9D-22BD-4D6B-B43F-5732BA6C3FBD</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -972,7 +938,7 @@
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
-				<string>- {query}{var:lineSuffix}</string>
+				<string>{query}{var:lineSuffix}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
@@ -984,41 +950,6 @@
 			<string>7F904FE5-11B1-40E3-989C-5FA32E3463B6</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>2</integer>
-				<key>hotmod</key>
-				<integer>1179648</integer>
-				<key>hotstring</key>
-				<string>D</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>com.google.Chrome</string>
-				</array>
-				<key>relatedAppsMode</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>CC7BEA9D-22BD-4D6B-B43F-5732BA6C3FBD</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1046,27 +977,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>🌳 Appended to clipboard notes</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>6E955148-0EAD-4B93-AA94-03CC45442A6B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtextrtf</key>
@@ -1089,6 +999,27 @@
 			<string>89EA0B40-A5B6-4CF2-8239-77CBE4CEA51F</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>🌳 Appended to clipboard notes</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>6E955148-0EAD-4B93-AA94-03CC45442A6B</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1402,13 +1333,6 @@ function getTextFragmentLink(activeTab) {
 			<key>ypos</key>
 			<integer>905</integer>
 		</dict>
-		<key>3DF78C1E-A25C-48F6-A5F0-DF11EBEB1D02</key>
-		<dict>
-			<key>xpos</key>
-			<integer>35</integer>
-			<key>ypos</key>
-			<integer>745</integer>
-		</dict>
 		<key>48D82DDD-C8A3-4202-815C-3E8EA3566E35</key>
 		<dict>
 			<key>note</key>
@@ -1593,10 +1517,12 @@ function getTextFragmentLink(activeTab) {
 		</dict>
 		<key>CC7BEA9D-22BD-4D6B-B43F-5732BA6C3FBD</key>
 		<dict>
+			<key>note</key>
+			<string>Notion append</string>
 			<key>xpos</key>
-			<integer>75</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<integer>995</integer>
+			<integer>885</integer>
 		</dict>
 		<key>CD0A2BC1-FDD3-40EF-B0A1-D1880402BE96</key>
 		<dict>
