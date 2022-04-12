@@ -76,6 +76,7 @@ run((originalClipboard) => {
     const { parseDomain, fromUrl } = importParseDomain();
     // @ts-ignore
     const parseResult = parseDomain(fromUrl(url));
+    console.log("parseResult", JSON.stringify(parseResult, null, 2))
     // @ts-ignore
     return `${parseResult.domain}.${parseResult.topLevelDomains.join(".")}`;
   }
@@ -571,29 +572,31 @@ run((originalClipboard) => {
       /^([a-z][*+.a-z-]+:\/\/)([^[].*:[^/?]*:[^/?]*)(.*)/i;
     var NO_HOSTNAME = Symbol("NO_HOSTNAME");
       // @ts-ignore
-    var fromUrl = (urlLike) => {
-      if (typeof URL !== "function") {
-        throw new Error(
-          "Looks like the new URL() constructor is not globally available in your environment. Please make sure to use a polyfill."
-        );
-      }
-      if (typeof urlLike !== "string") {
-        return NO_HOSTNAME;
-      }
-      let url = urlLike.startsWith("//")
-        ? `http:${urlLike}`
-        : urlLike.startsWith("/")
-        ? urlLike
-        : urlPattern.test(urlLike)
-        ? urlLike
-        : `http://${urlLike}`;
-      url = url.replace(invalidIpv6Pattern, "$1[$2]$3");
-      try {
-        return new URL(url).hostname;
-      } catch (_a) {
-        return NO_HOSTNAME;
-      }
-    };
+    // var fromUrl = (urlLike) => {
+    //   if (typeof URL !== "function") {
+    //     throw new Error(
+    //       "Looks like the new URL() constructor is not globally available in your environment. Please make sure to use a polyfill."
+    //     );
+    //   }
+    //   if (typeof urlLike !== "string") {
+    //     return NO_HOSTNAME;
+    //   }
+    //   let url = urlLike.startsWith("//")
+    //     ? `http:${urlLike}`
+    //     : urlLike.startsWith("/")
+    //     ? urlLike
+    //     : urlPattern.test(urlLike)
+    //     ? urlLike
+    //     : `http://${urlLike}`;
+    //   url = url.replace(invalidIpv6Pattern, "$1[$2]$3");
+    //   try {
+    //     console.log("new URL", url);
+        
+    //     return new URL(url).hostname;
+    //   } catch (_a) {
+    //     return NO_HOSTNAME;
+    //   }
+    // };
 
     // node_modules/parse-domain/serialized-tries/icann.js
     var icann_default =
@@ -1075,7 +1078,9 @@ run((originalClipboard) => {
         : urlPattern.test(urlLike)
         ? urlLike
         : `http://${urlLike}`;
-      url = url.replace(invalidIpv6Pattern, "$1[$2]$3");
+      
+      // NOTE: This was adding a bracket to the front of the URL, and I don't think we need it
+      // url = url.replace(invalidIpv6Pattern, "$1[$2]$3");
       try {
         return extractHostname(url);
       } catch (_a) {
