@@ -62,11 +62,25 @@ run((originalClipboard) => {
       console.log("labelLink:", labelLink);
 
       retVal = `${selectedText} ([${labelLink}](${textFragmentLink}))`;
+
+      // There's a known bug with Notion (that they've told me they won't address), where they seem to strip a character after a Markdown link if the link ends with `.`. Which happens a lot with text fragment links. So we just add an extra paren
+      if (textFragmentLink.endsWith(".")) {
+        console.log("Notion bug: Adding an extra paren");
+        retVal += ")";
+      }
+
       console.log("retVal:", retVal);
     } else {
       // If just copying the URL, use the title as the MD link title
       const title = tabTitle();
+
       retVal = `[${title}](${url})`;
+
+      // There's a known bug with Notion (that they've told me they won't address), where they seem to strip a character after a Markdown link if the link ends with `.`. Which happens a lot with text fragment links. So we just add an extra paren
+      if (url.endsWith(".")) {
+        console.log("Notion bug: Adding an extra paren");
+        retVal += ")";
+      }
     }
 
     return retVal;
@@ -122,9 +136,9 @@ run((originalClipboard) => {
     );
   }
 
-  ///////////////////////////////////////
-  // Reference
-  ///////////////////////////////////////
+  /********************************************************************
+   * Reference
+   *******************************************************************/
 
   // Old way of grabbing original clipboard, before we figured out we could do that with Alfred itself
   // Grab the original clipboard for reference
@@ -141,9 +155,15 @@ run((originalClipboard) => {
   //  const originalClipboard = $.getenv('originalClipboard');
   //  console.log("originalClipboard:", originalClipboard)
 
-  ///////////////////////////////////////
-  // Hairy
-  ///////////////////////////////////////
+  /********************************************************************
+   * Hairy
+   *******************************************************************/
+
+  /**************************************
+   * Code from the `parse-domain` library
+   *
+   * (modified where necessary)
+   *************************************/
 
   function importParseDomain() {
     // node_modules/parse-domain/build/sanitize.js
@@ -1110,6 +1130,11 @@ run((originalClipboard) => {
 
     return { parseDomain, fromUrl };
   }
+
+  /**************************************
+   * Minified JS for generating a text
+   * fragment link
+   *************************************/
 
   function getTextFragmentLink(activeTab: Chrome.Tab) {
     // NOTE: Semi-confirmed that this is blocking until the javascript is actually done
