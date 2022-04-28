@@ -51,19 +51,6 @@
 		</array>
 		<key>293CAF59-AFAC-45A0-A95C-20AA2FD33689</key>
 		<array/>
-		<key>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>80270192-9EFD-44DF-B0E0-4C5F0D32EAAB</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>48D82DDD-C8A3-4202-815C-3E8EA3566E35</key>
 		<array>
 			<dict>
@@ -317,7 +304,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</string>
+				<string>80270192-9EFD-44DF-B0E0-4C5F0D32EAAB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -796,7 +783,7 @@
 				<key>clipboardtext</key>
 				<string>{var:originalClipboard}
 
-{query}{var:lineSuffix}</string>
+{query}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
@@ -894,26 +881,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>lineSuffix</key>
-					<string>)</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -938,7 +905,7 @@
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
-				<string>{query}{var:lineSuffix}</string>
+				<string>{query}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
@@ -1325,13 +1292,6 @@ function getTextFragmentLink(activeTab) {
 			<integer>1015</integer>
 			<key>ypos</key>
 			<integer>415</integer>
-		</dict>
-		<key>2F09DBAD-015C-4E34-A65A-C6DC8B9BFB07</key>
-		<dict>
-			<key>xpos</key>
-			<integer>185</integer>
-			<key>ypos</key>
-			<integer>905</integer>
 		</dict>
 		<key>48D82DDD-C8A3-4202-815C-3E8EA3566E35</key>
 		<dict>
