@@ -64,11 +64,10 @@ run((originalClipboard) => {
       retVal = `${selectedText} ([${labelLink}](${textFragmentLink}))`;
 
       // There's a known bug with Notion (that they've told me they won't address), where they seem to strip a character after a Markdown link if the link ends with `.`. Which happens a lot with text fragment links. So we just add an extra paren
-      //// This is fixed now..?
-      // if (textFragmentLink.endsWith(".") && !textFragmentLink.endsWith(")")) {
-      //   console.log("Notion bug: Adding an extra paren");
-      //   retVal += ")";
-      // }
+      if (textFragmentLink.endsWith(".") && !textFragmentLink.endsWith(")")) {
+        console.log("Notion bug: Adding an extra paren");
+        retVal += ")";
+      }
 
       console.log("retVal:", retVal);
     } else {
