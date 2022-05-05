@@ -72,7 +72,12 @@ run((originalClipboard) => {
         );
       }
 
-      retVal = `${selectedText} ([${labelLink}](${textFragmentLink}))`;
+      const today = new Date();
+      const month = today.getMonth() + 1; // 0-indexed
+      const year = today.getFullYear();
+      const formattedYear = year.toString().substring(2, 4)
+
+      retVal = `_${selectedText}_ [[${labelLink}](${textFragmentLink}), ${month}/${formattedYear}]`;
 
       console.log("retVal:", retVal);
     } else {
