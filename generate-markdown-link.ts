@@ -52,8 +52,9 @@ run((originalClipboard) => {
       console.log("selectedText:", selectedText);
 
       getTextFragmentLink(activeTab);
+      // NOTE: The reason for the delay here is that it seems like the copying that needs to take place here sometimes takes some time. If it doesn't happen by the time we construct the link below, the link destination will just be a copy of the `selectedText` above.
       console.log(`🟡 🟡 🟡 delaying...`);
-      delay(0.05);
+      delay(0.1);
       console.log(`🟡 🟡 🟡 done delaying`);
       let textFragmentLink = chrome.theClipboard();
       console.log("link:", textFragmentLink);
