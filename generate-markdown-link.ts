@@ -55,20 +55,23 @@ run((originalClipboard) => {
       console.log(`🟡 🟡 🟡 delaying...`);
       delay(0.05);
       console.log(`🟡 🟡 🟡 done delaying`);
-      const textFragmentLink = chrome.theClipboard();
+      let textFragmentLink = chrome.theClipboard();
       console.log("link:", textFragmentLink);
 
       const labelLink = parseBareDomain(url);
       console.log("labelLink:", labelLink);
 
-      retVal = `${selectedText} ([${labelLink}](${textFragmentLink}))`;
-
       // There's a known bug with Notion (that they've told me they won't address), where they seem to strip a character after a Markdown link if the link ends with `.` and adds an incorrect paren to the end of the link. Which happens a lot with text fragment links. So we just add an extra paren
       // if (textFragmentLink.endsWith(".") && !textFragmentLink.endsWith(")")) {
       if (textFragmentLink.endsWith(".")) {
         console.log("Notion bug: Removing trailing period");
-        retVal = retVal.substring(0, retVal.length - 1)
+        textFragmentLink = textFragmentLink.substring(
+          0,
+          textFragmentLink.length - 1
+        );
       }
+
+      retVal = `${selectedText} ([${labelLink}](${textFragmentLink}))`;
 
       console.log("retVal:", retVal);
     } else {
