@@ -64,8 +64,8 @@ run((originalClipboard) => {
 
       // There's a known bug with Notion (that they've told me they won't address), where they seem to strip a character after a Markdown link if the link ends with `.` and adds an incorrect paren to the end of the link. Which happens a lot with text fragment links. So we just add an extra paren
       // if (textFragmentLink.endsWith(".") && !textFragmentLink.endsWith(")")) {
-      if (textFragmentLink.endsWith(".")) {
-        console.log("Notion bug: Removing trailing period");
+      if (textFragmentLink.endsWith(".") || textFragmentLink.endsWith("!") || textFragmentLink.endsWith("?")) {
+        console.log("Notion bug: Removing trailing punctuation");
         textFragmentLink = textFragmentLink.substring(
           0,
           textFragmentLink.length - 1
