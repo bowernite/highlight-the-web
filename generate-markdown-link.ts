@@ -67,9 +67,29 @@ run((originalClipboard) => {
       if (
         textFragmentLink.endsWith(".") ||
         textFragmentLink.endsWith("!") ||
-        textFragmentLink.endsWith("?")
+        textFragmentLink.endsWith("?") ||
+        textFragmentLink.endsWith("'") ||
+        textFragmentLink.endsWith('"') ||
+        textFragmentLink.endsWith("@") ||
+        textFragmentLink.endsWith("#") ||
+        textFragmentLink.endsWith("%") ||
+        textFragmentLink.endsWith("&") ||
+        textFragmentLink.endsWith("$") ||
+        textFragmentLink.endsWith("(") ||
+        textFragmentLink.endsWith(")") ||
+        textFragmentLink.endsWith("}") ||
+        textFragmentLink.endsWith("{") ||
+        textFragmentLink.endsWith("[") ||
+        textFragmentLink.endsWith("]") ||
+        textFragmentLink.endsWith("<") ||
+        textFragmentLink.endsWith(">") ||
+        textFragmentLink.endsWith(";") ||
+        textFragmentLink.endsWith(":") ||
+        textFragmentLink.endsWith("`") ||
+        textFragmentLink.endsWith("~") ||
+        textFragmentLink.endsWith("=")
       ) {
-        console.log("Notion bug: Removing trailing punctuation");
+        console.log("Notion bug: Removing trailing symbol");
         textFragmentLink = textFragmentLink.substring(
           0,
           textFragmentLink.length - 1
