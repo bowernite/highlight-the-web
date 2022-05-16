@@ -102,7 +102,7 @@ run((originalClipboard) => {
       const formattedYear = year.toString().substring(2, 4);
 
       // retVal = `_${selectedText}_ [[${labelLink}](${textFragmentLink}), ${month}/${formattedYear}]`;
-      retVal = `_${selectedText}_ [[${labelLink}: ${tabTitle()}](${textFragmentLink}), ${month}/${formattedYear}]`;
+      retVal = `${selectedText} _[[${labelLink}: ${tabTitle()}](${textFragmentLink}), ${month}/${formattedYear}]_`;
 
       console.log("retVal:", retVal);
     } else {
