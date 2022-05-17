@@ -75,8 +75,8 @@ run((originalClipboard) => {
         textFragmentLink.endsWith("%") ||
         textFragmentLink.endsWith("&") ||
         textFragmentLink.endsWith("$") ||
-        textFragmentLink.endsWith("(") ||
-        textFragmentLink.endsWith(")") ||
+        // textFragmentLink.endsWith("(") ||
+        // textFragmentLink.endsWith(")") ||
         textFragmentLink.endsWith("}") ||
         textFragmentLink.endsWith("{") ||
         textFragmentLink.endsWith("[") ||
