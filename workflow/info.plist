@@ -809,7 +809,7 @@
 						<key>matchmode</key>
 						<integer>4</integer>
 						<key>matchstring</key>
-						<string>^.*\[.+\]\(https?://.+\)</string>
+						<string>^.*\[.+\]\(.+\)</string>
 						<key>outputlabel</key>
 						<string>Have already started appending</string>
 						<key>uid</key>

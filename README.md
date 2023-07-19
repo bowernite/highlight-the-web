@@ -1,12 +1,14 @@
 <div align="center">
-  <h1>Alfred Markdown Links 🪄</h1>
-  <p>An Alfred workflow to automate generating notes and markdown links from a Chrome webpage.
+  <h1>Highlight the Web 🖍</h1>
+  <p>"Highlight" web content as you read it -- like you would when reading a high school textbook
 </div>
+
+An Alfred workflow that automatically generates notes and markdown links as you do research, so that you can easily track and trace content
 
 Some examples:
 
 - Hotkey to generate a markdown link for the current page, where the link title is the tab/document title
-- Hotkey to generate a snipper with the selected text, followed by a `source` markdown link, where the link utilizes the new [Text Fragment API](https://wicg.github.io/ScrollToTextFragment/) to link _exactly_ to where the text is on the page
+- Hotkey to generate a snippet with the selected text, followed by a `source` markdown link, where the link utilizes the new [Text Fragment API](https://wicg.github.io/ScrollToTextFragment/) to link _exactly_ to where the text is on the page
 - Hotkeys for either of those, but appending it to a running clipboard (ultimately resulting a list of markdown notes)
 
 ## Why?
