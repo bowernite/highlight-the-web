@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>bja.md-links</string>
+	<string>bja.highlight-the-web</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -345,11 +345,11 @@
 	<key>createdby</key>
 	<string>Brett Abramczyk</string>
 	<key>description</key>
-	<string>Generate useful Markdown links</string>
+	<string></string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Markdown Links</string>
+	<string>Highlight the Web</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -472,6 +472,8 @@
 				</array>
 				<key>elselabel</key>
 				<string>✅ success</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -711,6 +713,8 @@
 				</array>
 				<key>elselabel</key>
 				<string>✅ success</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -818,6 +822,8 @@
 				</array>
 				<key>elselabel</key>
 				<string>Start of new appending</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -1030,6 +1036,8 @@
 				</array>
 				<key>elselabel</key>
 				<string>Start of new appending</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -1196,6 +1204,8 @@ function getTextFragmentLink(activeTab) {
 				</array>
 				<key>elselabel</key>
 				<string>Start of new appending</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -1520,6 +1530,8 @@ function getTextFragmentLink(activeTab) {
 			<integer>895</integer>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>webaddress</key>
 	<string></string>
 </dict>
